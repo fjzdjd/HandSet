@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <!-- navbar header 字体颜色 -->
+    <color name="navbar_header_text_color">#3b9ac6</color>
+
+    <drawable name="navbar_bg">#f2fafafa</drawable>
+
+    <color name="radio_color_pressed">#0D73CB</color>
+    <color name="radio_color_normal">#494E56</color>
+    <color name="divider">#343643</color>
+    <color name="white">#ffffff</color>
+
+</resources>

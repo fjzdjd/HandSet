@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/backToNav_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/backtonav_selector"
+        android:text="@string/btn_dispatch_airMaterialsEnter"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/airMaterialTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_dispatch_airMaterialsEnter"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/nav_ivw"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/backToNav_btn"
+        android:contentDescription="@null"
+        android:src="@drawable/nav_divider" />
+
+</RelativeLayout>

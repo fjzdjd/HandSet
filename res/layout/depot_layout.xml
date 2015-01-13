@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dip"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/depot_locate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_locate"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/depot_airMaterials_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_airMaterials"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/depot_batch_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_batch"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/depot_bookKeeper_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_bookKeeper"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/depot_labelLocate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_labelLocate"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/distributionInventory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:text="@string/btn_depot_distributionInventory"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</ScrollView>

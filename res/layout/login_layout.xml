@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:gravity="center_horizontal"
+        android:text="@string/txt_login_title"
+        android:textSize="28sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dip"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="80dip"
+                android:layout_height="40dip"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/txt_login_username"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/login_username_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/username"
+                android:inputType="text"
+                android:text="sxyw" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="80dip"
+                android:layout_height="40dip"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/txt_login_password"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/login_password_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/password"
+                android:inputType="textPassword"
+                android:text="1234" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/login_save_password_ckb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:button="@drawable/btn_check"
+        android:checked="true"
+        android:drawablePadding="4dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="30dp"
+        android:text="@string/txt_login_remeberMe"
+        android:textColor="#cacaca"
+        android:textSize="17.0sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/login_ok_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/login_ok_selector"
+            android:text="@string/btn_login_ok"
+            android:textColor="#cacaca"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/login_cancel_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/login_ok_btn"
+            android:background="@drawable/login_ok_selector"
+            android:text="@string/btn_login_cancel"
+            android:textColor="#cacaca"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
