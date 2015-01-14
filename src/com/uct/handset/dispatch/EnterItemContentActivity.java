@@ -5,19 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import android.R.integer;
-import android.R.layout;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -30,7 +24,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.uct.handset.R;
-import com.uct.handset.R.drawable;
 import com.uct.handset.component.CustomAdapter;
 import com.uct.handset.dao.ReleaseDataBase;
 
@@ -128,12 +121,14 @@ public class EnterItemContentActivity extends Activity implements
 					popupListData);
 			popupList.setAdapter(popupAdapter);
 
-			popupWindow = new PopupWindow(popupView, LayoutParams.WRAP_CONTENT,
-					LayoutParams.WRAP_CONTENT);
+			popupWindow = new PopupWindow(popupView);
+
+			popupWindow.setWidth(LayoutParams.WRAP_CONTENT);
+			popupWindow.setHeight(LayoutParams.WRAP_CONTENT);
 		}
 
 		popupWindow.setBackgroundDrawable(getResources().getDrawable(
-				R.drawable.main_bg));
+				R.drawable.pdf));
 		// 设置允许在外点击消失
 		popupWindow.setOutsideTouchable(true);
 		// 使其聚集
@@ -148,6 +143,10 @@ public class EnterItemContentActivity extends Activity implements
 					int position, long id) {
 
 				popupWindow.dismiss();
+				// 判断isFile？
+				Intent intent = new Intent(EnterItemContentActivity.this,
+						EnterJNIActivity.class);
+				startActivity(intent);
 			}
 		});
 

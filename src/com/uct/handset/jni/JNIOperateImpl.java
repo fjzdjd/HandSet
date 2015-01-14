@@ -70,8 +70,14 @@ public class JNIOperateImpl implements JNInterface {
 
 	@Override
 	public String SetReaderWorkChannel(String parameter) {
+		String result = JNInitParameter.INIT_VALUE;
+		try {
+			result = operateJNI.SetReaderWorkChannel(parameter);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-		return null;
+		return result;
 	}
 
 	@Override

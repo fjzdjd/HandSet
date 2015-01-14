@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.uct.handset.R;
+import com.uct.handset.constant.JNIConstant;
 import com.uct.handset.jni.JNIOperateImpl;
 import com.uct.handset.jni.JNInterface;
 
@@ -71,54 +72,51 @@ public class DepotFragment extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		// 航材
 		case R.id.depot_airMaterials_btn:
 			new Thread() {
-				@Override
 				public void run() {
-					Log.d(TAG, "获得读写id" + testJni.GetReaderID());
-					super.run();
-				}
+					String paramer = JNIConstant.READERWORKCHANNEL;
+					String result = testJni.SetReaderWorkChannel(paramer);
+					Log.d(TAG, "获得读写id" + result);
+				};
 			}.start();
-
 			break;
+		// 批次
 		case R.id.depot_batch_btn:
 			new Thread() {
-				@Override
 				public void run() {
-					Log.d(TAG, "获的版本信息" + testJni.GetReaderVersion());
-					super.run();
-				}
+					String paramer = JNIConstant.SETINVENTORYCONFIG;
+					String result = testJni.SetInventoryConfig(paramer);
+					Log.d(TAG, "获得读写id" + result);
+				};
 			}.start();
 
 			break;
+		// 電子賬本
 		case R.id.depot_bookKeeper_btn:
-			new Thread() {
-				@Override
-				public void run() {
-					Log.d(TAG, testJni.GetInventoryConfig());
-					super.run();
-				}
-			}.start();
 
 			break;
+		// 貨位標籤
 		case R.id.depot_labelLocate_btn:
+
+			break;
+		// 货位
+		case R.id.depot_locate_btn:
+
 			new Thread() {
 				@Override
 				public void run() {
-					Log.d(TAG, testJni.GetReaderTxPower());
+					String result = testJni.GetReaderID();
+					Log.d(TAG, "获得读写id" + result);
 					super.run();
 				}
 			}.start();
 
 			break;
-		case R.id.depot_locate_btn:
-			new Thread() {
-				@Override
-				public void run() {
-					Log.d(TAG, testJni.GetReaderWorkChannel());
-					super.run();
-				}
-			}.start();
+
+		// 库存分布
+		case R.id.depot_distributionInventory:
 
 			break;
 
@@ -126,5 +124,11 @@ public class DepotFragment extends Fragment implements OnClickListener {
 			break;
 		}
 
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
 	}
 }
